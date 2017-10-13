@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Vehicle.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    Vehicle *car = [[Vehicle alloc]init];
+    car.odometer = -100;
+    
+    NSLog(@"Odometer: %lu", car.odometer);
+    
+    car.model = @"BMW 328i";
+    
+    NSLog(@"Make and Model: %@", car.model);
+    
+    car.model = @"Honda Civic";
+    
+    NSLog(@"I drive a %@", car.model);
 }
 
 
